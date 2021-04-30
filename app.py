@@ -4,6 +4,7 @@ import png
 from pyqrcode import QRCode
 
 app = Flask(__name__)
+PORT= 4006
 
 @app.route('/',methods=["POST","GET"])
 def hello_world():
@@ -18,4 +19,4 @@ def downloads():
     return  render_template("show.html", title="Download QR code")
 
 if __name__=="__main__":
-    app.run(debug=True)
+    app.run(debug=True, host="0.0.0.0", port = PORT)
