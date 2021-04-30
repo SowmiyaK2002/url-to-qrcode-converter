@@ -13,7 +13,7 @@ def hello_world():
 def downloads():
     url_link = request.values.get("url","")
     url = pyqrcode.create(url_link)
-    url.png("static\image\qrcode.png",scale=6)
+    url.png("static/image/qrcode.png",scale=6)
     #return ("downloaded successfully")
     return  render_template("show.html", title="Download QR code")
 
